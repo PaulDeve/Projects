@@ -1,0 +1,170 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: 100vh;
+}
+
+.card {
+  background: #000000;
+width: var(--card-width);
+height: var(--card-height);
+padding: 30px;
+position: relative;
+border-radius: 6px;
+justify-content: center;
+align-items: center;
+text-align: center;
+display: flex;
+font-size: 1.5em;
+color: rgba(0,174,255,0);
+font-family: cursive;
+}
+
+.card ::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #f0da16, #e0e33c 43%, #c26700);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height)/6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height)/6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #ffbb00, #e0e33c 43%, #c26700);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: "Slabo 27px", serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.pacman {
+  width: 100px;
+  height: 100;
+  border-radius: 0%;
+  background: #f5d625;
+  position: relative;
+  margin-top: 20px;
+}
+
+.pacman__eye {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 20px;
+  right: 40px;
+  background: #000000;
+}
+
+.pacman__mouth {
+  background: rgb(0,0,0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+          clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+  -webkit-animation-name: eat;
+          animation-name: eat;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.pacman__food {
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  top: 40%;
+  left: 120px;
+  -webkit-animation-name: food;
+          animation-name: food;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes eat {
+  0% {
+    -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+            clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+  }
+  25% {
+    -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 40%);
+            clip-path: polygon(100% 74%, 44% 48%, 100% 40%);
+  }
+  50% {
+    -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 50%);
+            clip-path: polygon(100% 74%, 44% 48%, 100% 50%);
+  }
+  75% {
+    -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 35%);
+            clip-path: polygon(100% 74%, 44% 48%, 100% 35%);
+  }
+  100% {
+    -webkit-clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+            clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+  }
+}
+
+@keyframes food {
+  0% {
+    transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}

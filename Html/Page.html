@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Page.css">
+    <title>Programador Web</title>
+</head>
+<body>
+    <header>
+        <h1>Programador Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#ejecutar-codigo">Ejecutar Código</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <p>Ofrezco servicios de desarrollo web, diseño de interfaz de usuario y más. Contáctame para obtener más información.</p>
+    </section>
+
+    <section id="ejecutar-codigo">
+        <h2>Ejecutar Código</h2>
+        <div>
+            <label for="codigo">Ingresa tu código:</label>
+            <textarea id="codigo" rows="8" cols="50"></textarea>
+        </div>
+        <button onclick="ejecutarCodigo()">Ejecutar</button>
+        <div id="resultado"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Programador Web</p>
+    </footer>
+
+    <script src="js/Page.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbol de Navidad</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .tree {
+            position: relative;
+            height: 400px;
+            width: 250px;
+            background-color: #457B9D;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .tree:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 50%;
+            background-color: #336699;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .star {
+            position: absolute;
+            background-color: #FFC107;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .tree .branch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #457B9D;
+            transform-origin: top center;
+        }
+
+        .tree .branch:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .tree .branch:nth-child(3) {
+            transform: rotate(90deg);
+        }
+
+        .tree .branch:nth-child(4) {
+            transform: rotate(135deg);
+        }
+
+        .tree .branch:nth-child(5) {
+            transform: rotate(180deg);
+        }
+
+        .tree .branch:nth-child(6) {
+            transform: rotate(225deg);
+        }
+
+        .tree .branch:nth-child(7) {
+            transform: rotate(270deg);
+        }
+
+        .tree .branch:nth-child(8) {
+            transform: rotate(315deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+        <div class="branch"></div>
+    </div>
+    <script>
+        const tree = document.querySelector('.tree');
+        const branches = document.querySelectorAll('.branch');
+        const stars = [];
+
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            tree.appendChild(star);
+            stars.push(star);
+        }
+
+        branches.forEach((branch, index) => {
+            setTimeout(() => {
+                branch.style.borderBottomColor = '#336699';
+            }, 200 * index);
+        });
+
+        stars.forEach((star, index) => {
+            setTimeout(() => {
+                star.style.transform = `translate(${Math.random() * 50 - 25}%, ${Math.random() * 200}%)`;
+            }, 200 * index);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Audio Visualizer w/ ParticlesJS</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"><link rel='stylesheet' href='css/fontawesome.css'><link rel="stylesheet" href="css/audio.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="wrapper">
+  <div id="drop-zone-wrapper">
+    <div id="drop-zone">
+      <div id="label"><i class="fa fa-cloud-upload"></i>
+        <h1>Drop MP3 Here</h1>
+      </div>
+    </div>
+    <div id="alternate-option"><i class="fa fa-music"></i>
+      <h1>Or Use Default Song</h1>
+    </div>
+  </div>
+  <div class="hidden" id="center-logo">
+    <div id="audio-canvas-wrapper">
+      <canvas id="audio-canvas"></canvas>
+    </div>
+    <div id="text">
+      <h1>MUSIC</h1>
+      <h1>SQUAD</h1>
+    </div>
+  </div>
+  <div class="particles" id="particles-slow"></div>
+  <div class="particles initial hidden" id="particles-fast"></div>
+  <div id="reset">
+    <h1>Reset</h1>
+  </div>
+</div>
+<!-- partial -->
+<script src='js/particles.js'></script>
+<script src='js/lodash.js'></script>
+<script src='js/hiperplexed.js'></script>
+<script  src="js/audio.js"></script>
+
+</body>
+</html>

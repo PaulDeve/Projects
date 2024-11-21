@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editor de Código</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+    
+
+    <div id="editor" style="height: 300px;"></div>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai"); // Cambia el tema según tus preferencias
+        editor.getSession().setMode("ace/mode/javascript"); // Establece el lenguaje de programación
+
+          // Obtén una referencia al botón
+    var botonEjecutar = document.getElementById("ejecutarCodigo");
+
+// Agrega un evento clic al botón
+botonEjecutar.addEventListener("click", function() {
+    // Obtén el código del editor
+    var codigo = editor.getValue();
+
+    try {
+        // Ejecuta el código utilizando eval()
+        eval(codigo);
+    } catch (error) {
+        // Maneja los errores si ocurren
+        alert("Error al ejecutar el código: " + error);
+    }
+});
+    // Obtén una referencia al botón "Copiar"
+    var botonCopiar = document.getElementById("copiarCodigo");
+
+    // Agrega un evento clic al botón "Copiar"
+    botonCopiar.addEventListener("click", function() {
+        // Obtén el código del editor
+        var codigo = editor.getValue();
+
+        // Crea un elemento de texto temporal para copiar al portapapeles
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = codigo;
+
+        // Agrega el elemento temporal al DOM
+        document.body.appendChild(tempTextArea);
+
+        // Selecciona todo el texto en el elemento de texto temporal
+        tempTextArea.select();
+
+        // Intenta copiar el texto al portapapeles
+        try {
+            document.execCommand("copy");
+            alert("El código se ha copiado al portapapeles.");
+        } catch (error) {
+            alert("Error al copiar el código: " + error);
+        } finally {
+            // Elimina el elemento temporal
+            document.body.removeChild(tempTextArea);
+        }
+    });
+
+    </script>
+
+    <button id="ejecutarCodigo">Ejecutar</button>
+    <button id="copiarCodigo">Copiar</button>
+</body>
+</html>

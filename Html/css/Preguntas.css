@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #options-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #score {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4CAF50;
+  }
+  

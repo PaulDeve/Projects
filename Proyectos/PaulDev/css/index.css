@@ -1,0 +1,29 @@
+body {
+    background-color: #000000; /* Código de color oscuro, en este caso, gris oscuro */
+    color: #302c2c; /* Cambia el color del texto para que sea legible en fondo oscuro */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header {
+    position: relative;
+}
+  

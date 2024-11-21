@@ -1,0 +1,66 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #706b6b;
+    border-radius: 15px;
+}
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

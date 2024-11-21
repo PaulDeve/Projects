@@ -1,0 +1,81 @@
+body {
+    background-color: #ed1c24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .shield {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: #004d98;
+  }
+  
+  .top,
+  .left,
+  .right,
+  .bottom {
+    position: absolute;
+    background-color: #004d98;
+  }
+  
+  .top {
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid #004d98;
+  }
+  
+  .left {
+    top: 75px;
+    left: 0;
+    width: 75px;
+    height: 150px;
+  }
+  
+  .right {
+    top: 75px;
+    right: 0;
+    width: 75px;
+    height: 150px;
+  }
+  
+  .bottom {
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 75px solid #004d98;
+  }
+  
+  .stripes {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #ed1c24;
+    border-bottom: 30px solid #ed1c24;
+  }
+  
+  .crest {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  

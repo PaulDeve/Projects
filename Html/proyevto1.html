@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <title>Editor de Código</title>
+    <link rel="stylesheet" href="css/proy.css">
+</head>
+<body>
+    <header>
+        <h1>Editor de Código</h1>
+    </header>
+    <main>
+        <div class="editor">
+            <textarea id="html-editor" class="code-editor" placeholder="HTML"></textarea>
+            <textarea id="css-editor" class="code-editor" placeholder="CSS"></textarea>
+            <textarea id="js-editor" class="code-editor" placeholder="JavaScript"></textarea>
+        </div>
+        <div class="resultado">
+            <iframe id="resultado-iframe"></iframe>
+        </div>
+    </main>
+    <script src="js/proy.js"></script>
+
+    <button id="run-button">Ejecutar</button>
+
+</body>
+</html>

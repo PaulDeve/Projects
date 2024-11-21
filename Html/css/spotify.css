@@ -1,0 +1,134 @@
+body {
+    background-color: black;
+    padding: calc(50vh - 175px);
+    text-align: center;
+}
+h1 {
+    color: #1db954;
+    font-size: 100px;
+    font-family: Tahoma;
+    animation-duration: 3s;
+    animation-name: fadeIn;
+}
+.circle {
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #1db954;
+    overflow: hidden;
+}
+.circle .curve-1 {
+    display: inline-block;
+    width: 175px;
+    height: 70px;
+    border-radius: 50%;
+    border: 20px solid;
+    border-color: black transparent
+    transparent transparent;
+    transform: rotate(7deg) scale(1.4);
+    position: relative;
+    left: -3px;
+    top: 130px;
+}
+.circle .curve-1::before {
+    content: "";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    left: 0.05em;
+    top: -0.098em;
+}
+.circle .curve-1::after {
+    content: " ";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    right: 0.05em;
+    top: -0.098em;
+}
+.circle .curve-2 {
+    display: inline-block;
+    width: 175px;
+    height: 70px;
+    border-radius: 50%;
+    border: 20px solid;
+    border-color: #000000 transparent
+    transparent transparent;
+    transform: rotate(7deg) scale(1.2);
+    position: relative;
+    left: -3px;
+    top: 55px;
+}
+.circle .curve-2::before {
+    content: " ";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    left: 0.05em;
+    top: -0.098;
+}
+.circle .curve-2::after {
+    content: " ";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    right: 0.05em;
+    top: -0.098em;
+}
+.circle .curve-3 {
+    display: inline-block;
+    width: 175px;
+    height: 70px;
+    border-radius: 50%;
+    border: 20px solid;
+    border-color: #000000 transparent 
+    transparent transparent;
+    transform: rotate(7deg) scale(1);
+    position: relative;
+    left: -3px;
+    top: -23px;
+}
+.circle .curve-3::before {
+    content: " ";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    left: 0.05em;
+    top: -0.098em;
+}
+.circle .curve-3::after {
+    content: " ";
+    display: inline-block;
+    width: 1.135em;
+    height: 1.135em;
+    border-radius: 50%;
+    background: #000000;
+    position: absolute;
+    right: 0.05em;
+    top: -0.098em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

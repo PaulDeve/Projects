@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matrices</title>
+    <link rel="stylesheet" href="css/Matriz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Matrices</h1>
+        <label for="matrix-size">Selecciona el tamaño de la matriz:</label>
+        <select id="matrix-size" onchange="generateMatrix()">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+            <option value="4">4x4</option>
+        </select>
+        <div id="matrix-container"></div>
+        <button onclick="calculate()">Calcular</button>
+        <div id="results"></div>
+    </div>
+    <script src="js/Matriz.js"></script>
+</body>
+</html>

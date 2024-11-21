@@ -1,0 +1,19 @@
+const ctx = document.getElementById('myChart').getContext('2d');
+
+
+const data = {
+    labels: ['Dato 1', 'Dato 2', 'Dato 3'],
+    datasets: [{
+        data: [30, 50, 20], // Los valores de cada segmento del grafico
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // Colores de los segmentos
+    }]
+};
+
+const myChart = new Chart(ctx, {
+    type: 'doughnut', // Cambia 'doughnut' por 'pie' para un grafico de pastel
+    data: data,
+    options: {
+        // Opciones de configuracion
+        responsive: true,
+    }
+});

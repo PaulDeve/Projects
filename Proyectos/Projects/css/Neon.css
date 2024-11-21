@@ -1,0 +1,138 @@
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.neon-lights {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.light {
+    width: 30px;
+    height: 100px;
+    background-color: #1da8a8;
+    border-radius: 50% 50% 0 0;
+    animation: neon 1s 
+    ease-in-out infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes neon {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 0 10px 
+        #1ba398, 0 0 20px 
+        #1ba398, 0 0 30px #1ba398;
+    }
+    100% {
+        transform: translateY(-20px);
+        box-shadow: 0 0 20px 
+        #1ba398, 0 0 30px 
+        #1ba398, 0 0 40px #1ba398;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

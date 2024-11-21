@@ -1,0 +1,30 @@
+.editor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #300909;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #000000;
+    background: #000000;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0f5364;
+    border: 1px solid #d8c3c3;
+}
